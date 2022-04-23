@@ -1,0 +1,33 @@
+{% extends 'cms/base/base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %}
+Webdox - Help
+{% endblock %}
+
+
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+<h1>Create a Post</h1>
+            <hr>
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{ form|crispy }}
+<input type="submit" class="btn btn-danger" value="Create Post">
+
+</form>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'cms/base/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+<h1>Enquiry</h1>
+            <hr>
+
+<form action="" method="post">
+   {% csrf_token %}
+   {{ form|crispy }}
+   <input type="submit" value="Submit">
+</form>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
